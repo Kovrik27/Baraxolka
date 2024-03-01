@@ -1,0 +1,48 @@
+﻿<Window x:Class="Baraxolka.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Baraxolka"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <Label Grid.Column="1" Grid.ColumnSpan="3" Content="Барахолка ППК" HorizontalAlignment="Center" FontSize="32"/>
+        <Image Source="C:\Users\Student\Downloads\ppk.jpeg"/>
+        <TabControl Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4">
+            <TabItem Header="Оперативки" Grid.Row="2" Grid.Column="1">
+                <Button Content="Добавить оперативку" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Click="OperativkaAdd"/>
+            </TabItem>
+            <TabItem Header="Процессоры" Grid.Row="2" Grid.Column="2">
+                <Button Content="Добавить процессор" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Click="ProssesorAdd"/>
+            </TabItem>
+            <TabItem Header="Видеокарты" Grid.Row="2" Grid.Column="2">
+                <Button Content="Добавить видеокарту" Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="2" Click="VideokartaAdd"/>
+            </TabItem>
+            <TabItem Header="SSD" Grid.Row="2" Grid.Column="2">
+                <Button Content="Добавить SSD" Grid.Row="5" Grid.Column="7" Grid.ColumnSpan="2" Click="SSDAdd"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
