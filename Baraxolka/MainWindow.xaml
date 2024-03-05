@@ -26,23 +26,19 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
-
         <Label Grid.Column="1" Grid.ColumnSpan="3" Content="Барахолка ППК" HorizontalAlignment="Center" FontSize="32"/>
-        <Image Source="C:\Users\Student\Downloads\ppk.jpeg"/>
-        <TabControl Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4">
-            <TabItem Header="Оперативки" Grid.Row="2" Grid.Column="1">
-                <Button Content="Добавить оперативку" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Click="OperativkaAdd"/>
-            </TabItem>
-            <TabItem Header="Процессоры" Grid.Row="2" Grid.Column="2">
-                <Button Content="Добавить процессор" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Click="ProssesorAdd"/>
-            </TabItem>
-            <TabItem Header="Видеокарты" Grid.Row="2" Grid.Column="2">
-                <Button Content="Добавить видеокарту" Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="2" Click="VideokartaAdd"/>
-            </TabItem>
-            <TabItem Header="SSD" Grid.Row="2" Grid.Column="2">
-                <Button Content="Добавить SSD" Grid.Row="5" Grid.Column="7" Grid.ColumnSpan="2" Click="SSDAdd"/>
-            </TabItem>
-        </TabControl>
+        <ListBox Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="4" HorizontalContentAlignment="Stretch" ItemsSource="{Binding Baraxolka}"/>
+        <Button Content="Добавить оперативку" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2" Click="OperativkaAdd"/>
+        <Button Content="Добавить процессор" Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="2" Click="ProssesorAdd"/>
+        <Button Content="Добавить видюху" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="2"/>
+        <Button Content="Добавить сетевое оборудование" Grid.Row="4" Grid.Column="6" Grid.ColumnSpan="2"/>
     </Grid>
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type local:Operativka}">
+            <StackPanel>
+                <TextBlock Text="{Binding Name}"/>
+                <TextBlock Text="{Binding Price}"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
 </Window>
