@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -21,56 +22,31 @@ namespace Baraxolka
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<object> Tovari { get; set; } = new();
-        public event PropertyChangedEventHandler? PropertyChanged;
+        public ObservableCollection<object> Baraxolka { get; set; } = new();
 
         public MainWindow()
         {
             InitializeComponent();
-            Tovari.Add(new Operativka { Operativki = new List<Operativka>(new Operativka[] { new Operativka { NameO = "GeForce 9080", } }) });
+            //Baraxolka.Add(new Operativka { Name = "Оперативка супер крутая 50DDR", Price = "1000000"});
+            DataContext = this;
         }
 
-        public class Videokarta
-        {
-            public string NameV { get; set; }
-            public byte[] ImageV { get; set; }
-            public decimal PriceV { get; set; }
-        }
 
-        public class Prossesor
-        {
-            public string NameP { get; set; }
-            public byte[] ImageP { get; set; }
-            public decimal PriceP { get; set; }
-        }
 
-        public class Operativka
-        {
-            public List<Operativka> Operativki { get; set; }
-            public string NameO { get; set; }
-            public byte[] ImageO { get; set; }
-            public decimal PriceO { get; set; }
-        }
-
-        public class SSD
-        {
-            public string NameS { get; set; }
-            public byte[] ImageS { get; set; }
-            public decimal PriceS { get; set; }
-        }
 
         private void OperativkaAdd(object sender, RoutedEventArgs e)
         {
-            {
-                OperativkaOkno operativkaOkno = new OperativkaOkno();
-                operativkaOkno.ShowDialog();
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Operativka)));
-            }
+            OperativkaOkno operativkaOkno = new OperativkaOkno(Baraxolka);
+            operativkaOkno.ShowDialog();
+            Baraxolka.Add(operativkaOkno.Operativka);
+
         }
 
         private void ProssesorAdd(object sender, RoutedEventArgs e)
         {
-
+            ProcessorOkno processorOkno = new ProcessorOkno(Baraxolka);
+            processorOkno.ShowDialog();
+            Baraxolka.Add(processorOkno.Processor);
         }
 
         private void VideokartaAdd(object sender, RoutedEventArgs e)

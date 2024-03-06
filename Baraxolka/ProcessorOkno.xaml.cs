@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,18 +16,19 @@ using System.Windows.Shapes;
 namespace Baraxolka
 {
     /// <summary>
-    /// Логика взаимодействия для OperativkaOkno.xaml
+    /// Логика взаимодействия для ProcessorOkno.xaml
     /// </summary>
-    public partial class OperativkaOkno : Window
+    public partial class ProcessorOkno : Window
     {
-        public Operativka Operativka { get; set; } = new Operativka();
+        public Processor Processor { get; set; } = new Processor();
 
-        public OperativkaOkno(System.Collections.ObjectModel.ObservableCollection<object> baraxolka)
+        public ProcessorOkno(System.Collections.ObjectModel.ObservableCollection<object> baraxolka)
         {
             InitializeComponent();
             DataContext = this;
         }
 
     }
+
 }
 
