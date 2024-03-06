@@ -51,11 +51,16 @@ namespace Baraxolka
 
         private void VideokartaAdd(object sender, RoutedEventArgs e)
         {
-
+            VideokartaOkno videokartaOkno = new VideokartaOkno(Baraxolka);
+            videokartaOkno.ShowDialog();
+            Baraxolka.Add(videokartaOkno.Videokarta);
         }
 
-        private void SSDAdd(object sender, RoutedEventArgs e)
+        private void SetevoiOborydovanieAdd(object sender, RoutedEventArgs e)
         {
+            SetevoiOborydovanieOkno setevoiOborydovanieOkno = new SetevoiOborydovanieOkno(Baraxolka);
+            setevoiOborydovanieOkno.ShowDialog();
+            Baraxolka.Add(setevoiOborydovanieOkno.SetevoiOborydovanie);
 
         }
     }
