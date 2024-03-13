@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Baraxolka.Model;
 
-namespace Baraxolka
+namespace Baraxolka.View
 {
     /// <summary>
     /// Логика взаимодействия для ProcessorOkno.xaml
@@ -26,10 +26,10 @@ namespace Baraxolka
         public ProcessorOkno(System.Collections.ObjectModel.ObservableCollection<object> baraxolka)
         {
             InitializeComponent();
-            DataContext = this;
+
+
         }
 
     }
-
 }
 

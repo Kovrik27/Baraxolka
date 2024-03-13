@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Baraxolka.Model;
 
-namespace Baraxolka
+namespace Baraxolka.View
 {
     /// <summary>
     /// Логика взаимодействия для VideokartaOkno.xaml
@@ -25,7 +25,6 @@ namespace Baraxolka
         public VideokartaOkno (System.Collections.ObjectModel.ObservableCollection<object> baraxolka)
         {
             InitializeComponent();
-            DataContext = this;
         }
     }
 }
