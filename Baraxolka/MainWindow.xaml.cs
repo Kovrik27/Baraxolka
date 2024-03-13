@@ -28,41 +28,9 @@ namespace Baraxolka
         {
             InitializeComponent();
             //Baraxolka.Add(new Operativka { Name = "Оперативка супер крутая 50DDR", Price = "1000000"});
-            DataContext = this;
         }
 
-
-
-
-        private void OperativkaAdd(object sender, RoutedEventArgs e)
-        {
-            OperativkaOkno operativkaOkno = new OperativkaOkno(Baraxolka);
-            operativkaOkno.ShowDialog();
-            Baraxolka.Add(operativkaOkno.Operativka);
-
-        }
-
-        private void ProssesorAdd(object sender, RoutedEventArgs e)
-        {
-            ProcessorOkno processorOkno = new ProcessorOkno(Baraxolka);
-            processorOkno.ShowDialog();
-            Baraxolka.Add(processorOkno.Processor);
-        }
-
-        private void VideokartaAdd(object sender, RoutedEventArgs e)
-        {
-            VideokartaOkno videokartaOkno = new VideokartaOkno(Baraxolka);
-            videokartaOkno.ShowDialog();
-            Baraxolka.Add(videokartaOkno.Videokarta);
-        }
-
-        private void SetevoiOborydovanieAdd(object sender, RoutedEventArgs e)
-        {
-            SetevoiOborydovanieOkno setevoiOborydovanieOkno = new SetevoiOborydovanieOkno(Baraxolka);
-            setevoiOborydovanieOkno.ShowDialog();
-            Baraxolka.Add(setevoiOborydovanieOkno.SetevoiOborydovanie);
-
-        }
+        
     }
 
 }

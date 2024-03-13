@@ -11,20 +11,23 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Baraxolka.Model;
 
 namespace Baraxolka
 {
     /// <summary>
-    /// Логика взаимодействия для VideokartaOkno.xaml
+    /// Логика взаимодействия для OperativkaOkno.xaml
     /// </summary>
-    public partial class VideokartaOkno : Window
+    public partial class OperativkaOkno : Window
     {
-        public Videokarta Videokarta { get; set; } = new Videokarta();
+        public Operativka Operativka { get; set; } = new Operativka();
 
-        public VideokartaOkno (System.Collections.ObjectModel.ObservableCollection<object> baraxolka)
+        public OperativkaOkno(System.Collections.ObjectModel.ObservableCollection<object> baraxolka)
         {
             InitializeComponent();
             DataContext = this;
         }
+
     }
 }
+

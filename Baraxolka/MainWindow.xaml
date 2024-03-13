@@ -4,7 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Baraxolka"
+        xmlns:vm="clr-namespace:Baraxolka.ViewModel"
         mc:Ignorable="d"
+        DataContext="{DynamicResource vm}"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
@@ -29,15 +31,16 @@
         <Label Grid.Column="1" Grid.ColumnSpan="3" Content="Барахолка ППК" HorizontalAlignment="Center" FontSize="32"/>
         <Image Source="C:\Users\Student\Desktop\PPS.jpg"/>
         <ListBox Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="4" HorizontalContentAlignment="Stretch" ItemsSource="{Binding Baraxolka}"/>
-        <Button Content="Добавить оперативку" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2" Click="OperativkaAdd"/>
-        <Button Content="Добавить процессор" Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="2" Click="ProssesorAdd"/>
-        <Button Content="Добавить видюху" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="2" Click="VideokartaAdd"/>
-        <Button Content="Добавить сетевое оборудование" Grid.Row="4" Grid.Column="6" Grid.ColumnSpan="2" Click="SetevoiOborydovanieAdd"/>
+        <Button Content="Добавить оперативку" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2" Command="{Binding AddOperativka}"/>
+        <Button Content="Добавить процессор" Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="2"/>
+        <Button Content="Добавить видюху" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="2"/>
+        <Button Content="Добавить сетевое оборудование" Grid.Row="4" Grid.Column="6" Grid.ColumnSpan="2"/>
     </Grid>
     <Window.Resources>
 
         <local:ConverterPriceOperativka x:Key="converter1"/>
-        
+        <vm:MainWindowVM x:Key="vm"/>
+
         <DataTemplate DataType="{x:Type local:Operativka}">
             <StackPanel>
                 <TextBlock Text="{Binding Name}"/>
