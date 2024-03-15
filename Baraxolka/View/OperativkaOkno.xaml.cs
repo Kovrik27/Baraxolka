@@ -20,11 +20,12 @@ namespace Baraxolka.View
     /// </summary>
     public partial class OperativkaOkno : Window
     {
-        public Operativka Operativka { get; set; } = new Operativka();
+        public Operativka NewOperativka { get; set; } = new();
 
         public OperativkaOkno(System.Collections.ObjectModel.ObservableCollection<object> baraxolka)
         {
             InitializeComponent();
+            DataContext = this;
         }
 
     }

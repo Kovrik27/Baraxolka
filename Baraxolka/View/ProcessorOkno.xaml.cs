@@ -21,11 +21,12 @@ namespace Baraxolka.View
     /// </summary>
     public partial class ProcessorOkno : Window
     {
-        public Processor Processor { get; set; } = new Processor();
+        public Processor NewProcessor { get; set; } = new();
 
         public ProcessorOkno(System.Collections.ObjectModel.ObservableCollection<object> baraxolka)
         {
             InitializeComponent();
+            DataContext = this;
 
 
         }

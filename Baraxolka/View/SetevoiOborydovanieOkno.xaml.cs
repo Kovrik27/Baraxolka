@@ -20,12 +20,13 @@ namespace Baraxolka.View
     /// </summary>
     public partial class SetevoiOborydovanieOkno : Window
     {
-        public SetevoiOborydovanie SetevoiOborydovanie { get; set; } = new SetevoiOborydovanie();
+        public SetevoiOborydovanie NewSetevoiOborydovanie { get; set; } = new();
 
         public SetevoiOborydovanieOkno(System.Collections.ObjectModel.ObservableCollection<object> baraxolka)
         {
             InitializeComponent();
-            
+            DataContext = this;
+
         }
     }
 }

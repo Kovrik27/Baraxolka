@@ -2,8 +2,27 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Baraxolka"
-             StartupUri="MainWindow.xaml">
+             StartupUri="View\MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <Style x:Key="ButtonAdd" TargetType="Button">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Padding" Value="15"/>
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="Background" Value="LightSteelBlue"/>
+            </Style>
+
+            <Style x:Key="Labelechka" TargetType="Label">
+                <Setter Property="Foreground" Value="LightSteelBlue"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="32"/>
+            </Style>
+
+            <Style x:Key="Labelechka2" TargetType="Label">
+                <Setter Property="Foreground" Value="LightSteelBlue"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

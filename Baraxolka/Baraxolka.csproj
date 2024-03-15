@@ -7,4 +7,15 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="bin\Debug\net7.0-windows\deshman.jpg" />
+    <Content Include="bin\Debug\net7.0-windows\deshman2.jpg" />
+    <Content Include="bin\Debug\net7.0-windows\deshman3.png" />
+    <Content Include="bin\Debug\net7.0-windows\deshman4.png" />
+    <Content Include="bin\Debug\net7.0-windows\dorogo.jpg" />
+    <Content Include="bin\Debug\net7.0-windows\dorogo2.png" />
+    <Content Include="bin\Debug\net7.0-windows\dorogo3.jpg" />
+    <Content Include="bin\Debug\net7.0-windows\dorogo4.jpg" />
+  </ItemGroup>
+
 </Project>

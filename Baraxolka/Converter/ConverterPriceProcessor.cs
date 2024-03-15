@@ -6,13 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
-using System.Windows.Media;
 
 namespace Baraxolka.Converter
 {
-    public class ConverterPriceOperativka : IValueConverter
+    public class ConverterPriceProcessor : IValueConverter
     {
-        // конвертация данных из объекта привязки в интерфейс
         public object Convert(object value,
                               Type targetType,
                               object parameter,
@@ -20,9 +18,9 @@ namespace Baraxolka.Converter
         {
             int price = int.Parse(value.ToString());
             if (price <= 1000)
-                return new Uri(Path.Combine(Environment.CurrentDirectory, "deshman.jpg"), UriKind.Absolute);
+                return new Uri(Path.Combine(Environment.CurrentDirectory, "deshman2.jpg"), UriKind.Absolute);
             else
-                return new Uri(Path.Combine(Environment.CurrentDirectory, "dorogo.jpg"), UriKind.Absolute);
+                return new Uri(Path.Combine(Environment.CurrentDirectory, "dorogo2.png"), UriKind.Absolute);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

@@ -22,7 +22,6 @@ namespace Baraxolka.View
     /// </summary>
     public partial class MainWindow : Window
     {
-        public ObservableCollection<object> Baraxolka { get; set; } = new();
 
         public MainWindow()
         {

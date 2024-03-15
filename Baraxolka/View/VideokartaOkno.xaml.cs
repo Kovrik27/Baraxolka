@@ -20,11 +20,12 @@ namespace Baraxolka.View
     /// </summary>
     public partial class VideokartaOkno : Window
     {
-        public Videokarta Videokarta { get; set; } = new Videokarta();
+        public Videokarta NewVideokarta { get; set; } = new();
 
         public VideokartaOkno (System.Collections.ObjectModel.ObservableCollection<object> baraxolka)
         {
             InitializeComponent();
+            DataContext = this;
         }
     }
 }
